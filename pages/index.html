@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hw 38</title>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body>
+  <div class="blocks">
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+  </div>
+  <button class="bttn">CHANGE COLORS</button>
+
+  <script>
+
+    const btn = document.querySelector('button')
+    const rc = () => Math.random() * (255 - 0) + 0;
+    const blocks = document.querySelectorAll('[class^="square"]')
+
+    btn.addEventListener("click", changeColor);
+
+    function changeColor() {
+      blocks.forEach(element => {
+        element.style.backgroundColor = 'rgb(' + rc() + ',' + rc() + ',' + rc() + ')';
+      });
+    }
+
+  </script>
+</body>
+
+</html>
